@@ -79,7 +79,7 @@ runSparkSQLBenchmark := {
   val args = spaceDelimited("[args]").parsed
   val scalaRun = (runner in run).value
   val classpath = (fullClasspath in Compile).value
-  scalaRun.run("com.databricks.spark.sql.perf.SparkBenchMark", classpath.map(_.data), args,
+  scalaRun.run("com.databricks.spark.sql.perf.SparkBenchmark", classpath.map(_.data), args,
     streams.value.log)
 }
 
